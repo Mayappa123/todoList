@@ -18,8 +18,10 @@ Open index.html in your web browser.
 
  <b>Screenshots</b>
 Empty Todo List
+<img src="images/todo1.png">
 
 Todo List with Items
+<img src="images/todo2.png">
 
 <b>Contributing</b>
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
