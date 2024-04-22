@@ -1,54 +1,63 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // here Creating the elements
-  const todoInput = document.getElementById("todo-input");
-  const addBtn = document.getElementById("add-button");
+  const inputField = document.getElementById("todo-input");
+  const addButton = document.getElementById("add-button");
   const todoList = document.getElementById("todo-list");
   const totalTasks = document.getElementById("total-tasks");
 
-  //Add eventLister
-  addBtn.addEventListener("click", function () {
-    const todoText = todoInput.value.trim();
-    if (todoText !== "") {
-      addTodoItem(todoText);
-      todoInput.value = "";
-      updateTotalTasks();
+  function disableAddButton() {
+    addButton.disabled = true;
+  }
+  disableAddButton();
+
+  inputField.addEventListener("input", function () {
+    addButton.disabled = inputField.value.trim() === "";
+  });
+
+  addButton.addEventListener("click", function () {
+    const text = inputField.value.trim();
+    if (text !== "") {
+      createTodoItem(text);
+      inputField.value = "";
+      addButton.disabled = true;
     }
   });
 
-  // function addTodoItem
-  function addTodoItem(todoText) {
+  function createTodoItem(text) {
     const li = document.createElement("li");
-    const checkbox = document.createElement("span");
-    checkbox.classList.add("checkbox");
-    const todoItem = document.createElement("span");
-    todoItem.textContent = todoText;
-    // here Append elements
-    li.appendChild(checkbox);
-    li.appendChild(todoItem);
-    todoList.appendChild(li);
+    li.classList.add("todo-item");
 
-    checkbox.addEventListener("click", function () {
-      if (li.classList.contains("checked")) {
-        li.classList.remove("checked");
-      } else {
-        li.classList.add("checked");
-      }
-    });
+    const todoText = document.createElement("div");
+    todoText.textContent = text;
+    todoText.classList.add("todo-text");
+    li.appendChild(todoText);
 
-    const deleteBtn = document.createElement("span");
-    deleteBtn.textContent = "\u00D7";
-    deleteBtn.classList.add("delete-button");
-    // here Append elements
-    li.appendChild(deleteBtn);
-
-    deleteBtn.addEventListener("click", function () {
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete";
+    deleteButton.classList.add("delete-button");
+    deleteButton.addEventListener("click", function () {
       li.remove();
       updateTotalTasks();
     });
+
+    li.appendChild(deleteButton);
+    todoList.appendChild(li);
+    updateTotalTasks();
   }
 
-  // function updateTotalTasks
   function updateTotalTasks() {
     totalTasks.textContent = todoList.children.length;
   }
+
+  addButton.addEventListener("click", function () {
+    const text = inputField.value.trim();
+    if (text !== "") {
+      createTodoItem(text);
+      inputField.value = "";
+      addButton.disabled = true;
+    } else {
+      showError("Todo should not be empty.");
+    }
+  });
+
+ 
 });
