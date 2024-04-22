@@ -1,4 +1,4 @@
-### <h1 style: text-align="center">Todo List App</h1>
+### <h1 style="text-align: center;">Todo List App</h1>
 <br>
 
 This is a simple Todo List application built using HTML, CSS, and JavaScript. It allows users to add and delete tasks from their todo list.
