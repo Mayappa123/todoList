@@ -1,5 +1,6 @@
 ### Todo List App
-<br><br>
+<br>
+
 This is a simple Todo List application built using HTML, CSS, and JavaScript. It allows users to add and delete tasks from their todo list.
 <br>
 
@@ -10,7 +11,7 @@ Responsive Design: The app is designed to be responsive and works well on both d
 <br>
 
 ### <b>Usage</b> <br>
-Clone the repository: git clone https://github.com/Mayappa123/todoList.git in your vs code.
+Clone the repository: <code> git clone https://github.com/Mayappa123/todoList.git </code> in your vs code.
 Open index.html in your web browser.
 <br>
 
