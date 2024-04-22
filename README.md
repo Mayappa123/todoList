@@ -11,7 +11,7 @@ Responsive Design: The app is designed to be responsive and works well on both d
 <br>
 
 ### <b>Usage</b> <br>
-Clone the repository: <code> git clone https://github.com/Mayappa123/todoList.git </code> in your vs code.
+Clone the repository: <code> git clone https://github.com/Mayappa123/todoList.git </code> in your vs code. <br>
 Open index.html in your web browser.
 <br>
 
