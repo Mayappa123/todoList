@@ -17,10 +17,10 @@ Open index.html in your web browser.
 <br><br>
 
 <b>Screenshots</b> <br>
-Empty Todo List
+Empty Todo List <br>
 <img src="/images/todo1.png" width="500" height="300">
-<br>
-Todo List with Items
+<br><br>
+Todo List with Items <br>
 <img src="/images/todo2.png" width="500" height="300">
 
 <br><br>
