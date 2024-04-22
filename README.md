@@ -1,6 +1,5 @@
 
 ### Todo List App
- 
 <br><br>
 This is a simple Todo List application built using HTML, CSS, and JavaScript. It allows users to add and delete tasks from their todo list.
 <br><br>
@@ -19,10 +18,10 @@ Open index.html in your web browser.
 
  <b>Screenshots</b> <br>
 Empty Todo List
-<img src="images/todo1.png">
+<img src="/images/todo1.png">
 <br>
 Todo List with Items
-<img src="images/todo2.png">
+<img src="/images/todo2.png">
 <br><br>
 
 <b>Contributing</b><br>
