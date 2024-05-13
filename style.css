@@ -2,58 +2,58 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  background-color: #f2f2f2;
 }
 
 .container {
-  max-width: 30%;
+  max-width: 750px;
   margin: 50px auto;
-  padding: 20px;
   background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
   color: #333;
 }
 
 .input-container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap if needed */
-  justify-content: center; /* Center items horizontally */
   align-items: center;
   margin-bottom: 20px;
 }
 
-input[type="text"] {
+.input-container input,
+.input-container select,
+.input-container button {
+  margin-right: 10px;
   flex: 1;
+}
+
+input[type="text"],
+select,
+button {
   padding: 10px;
-  margin-right: 10px; /* Add some spacing between input and button */
-  border: 1px solid #ced4da;
+  border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-  max-width: 70%; /* Adjust based on your design */
+}
+
+input[type="date"] {
+  padding: 8px;
 }
 
 button {
-  padding: 10px 20px;
-  font-size: 20px;
-  height: 40px;
-  width: 100px; /* Allow button width to adjust based on content */
-  background-color: #0c9707;
+  background-color: #4caf50;
   color: #fff;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-
 button:hover {
-  background-color: #0056b3;
+  background-color: #0e5a12;
 }
 
 ul {
@@ -62,42 +62,41 @@ ul {
 }
 
 li {
-  padding: 15px;
-  border-bottom: 2px solid #ddd;
-  color: #333;
-  display: flex;
-  align-items: center;
-  font-size: 22px;
-}
-
-.todo-text {
-  flex-grow: 1; /* Take up remaining space */
-}
-
-.delete-button {
-  background-color: #ff011a;
-  color: #fff;
-  border: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
   border-radius: 5px;
-  padding: 8px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li:hover {
+  background-color: #f0f0f0;
+}
+
+li span {
+  margin-right: 10px;
+}
+
+li .markAsDone {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.delete-button:hover {
-  background-color: #c82333;
+li .markAsDone:hover {
+  background-color: #c62828;
+}
+
+.complete {
+  background-color: #4caf50;
+  opacity: 0.5;
 }
 
 
-p {
-  text-align: center;
-  margin-top: 30px;
-  color: #666;
-  font-size: 22px;
-}
 
-#total-tasks {
-  font-weight: bold;
-  color: #333;
-  font-size: 22px;
-}
+
