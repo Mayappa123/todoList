@@ -34,15 +34,14 @@ h1 {
 
 input[type="text"],
 select,
-button {
+button,
+input[type="date"] {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
-}
-
-input[type="date"] {
-  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 button {
@@ -61,25 +60,22 @@ ul {
   padding: 0;
 }
 
-li {
-  margin-bottom: 10px;
+.task-item {
+  list-style-type: none;
   padding: 10px;
   background-color: #f9f9f9;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 10px;
 }
 
-li:hover {
-  background-color: #f0f0f0;
-}
-
-li span {
+.task-text {
   margin-right: 10px;
 }
 
-li .markAsDone {
+.markAsDone {
   background-color: #e53935;
   color: white;
   border: none;
@@ -88,10 +84,11 @@ li .markAsDone {
   cursor: pointer;
 }
 
-li .markAsDone:hover {
+.markAsDone:hover {
   background-color: #c62828;
 }
 
-.complete {
-  opacity: 0.5;
-}
+
+
+
+
