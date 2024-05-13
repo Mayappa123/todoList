@@ -93,6 +93,5 @@ li .markAsDone:hover {
 }
 
 .complete {
-  background-color: #4caf50;
   opacity: 0.5;
 }

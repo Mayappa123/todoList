@@ -44,7 +44,7 @@ function renderTask(task) {
   li.addEventListener("click", function () {
     var markasDoneBtn = li.querySelector(".markasDone");
     if (markasDoneBtn.innerText === "Mark as Done") {
-      markasDoneBtn.innerText = "Delete";
+      markasDoneBtn.innerText = "❌";
       task.completed = true;
     } else {
       var index = tasks.indexOf(task);

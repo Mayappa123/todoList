@@ -15,13 +15,6 @@ Clone the repository: <code> git clone https://github.com/Mayappa123/todoList.gi
 Open index.html in your web browser.
 <br>
 
-### <b>Screenshots</b> <br>
-Empty Todo List <br>
-<img src="/images/todo1.png" width="500" height="300">
-<br><br>
-Todo List with Items <br>
-<img src="/images/todo2.png" width="500" height="300">
-<br>
 
 ### <b>Contributing</b><br>
 Contributions are welcome! If you'd like to contribute to this project, please fork the repository and submit a pull request.
