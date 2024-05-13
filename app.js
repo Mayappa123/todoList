@@ -36,7 +36,7 @@ function renderTask(task) {
   var li = document.createElement("li");
   li.innerHTML = `
         <span>${task.text}</span>
-        <span>Due Date: ${task.dueDate}</span>
+        <span>Due-Date: ${task.dueDate}</span>
         <Button class="markasDone">${
           task.completed ? "Delete" : "Mark as Done"
         }</Button>
