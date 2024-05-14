@@ -9,7 +9,7 @@ function addTask() {
   var dueDate = document.getElementById("dueDate");
   var taskText = input.value.trim();
   var date = dueDate.value;
-  if (taskText !== "") {
+  if (taskText !== "" && dueDate.value !== "") {
     var task = {
       text: taskText,
       dueDate: date,
@@ -30,8 +30,8 @@ function renderTask(task) {
   var li = document.createElement("li");
   li.innerHTML = `
     <div class="task-container">
-        <span>${task.text}</span>
-        <span>Due Date: ${task.dueDate}</span>
+        <span class="task-name">${task.text}</span>
+        <span>Due-Date: ${task.dueDate}</span>
         <button class="markAsDone">${
           task.completed ? "Delete" : "Mark as Done"
         }</button>
@@ -62,10 +62,6 @@ function renderTask(task) {
   });
   ul1.appendChild(li);
 }
-
-
-
-
 
 function renderTasks() {
   tasks.forEach(function (task) {
