@@ -87,11 +87,10 @@ function renderTask(task) {
   ul1.appendChild(li);
 }
 
-function sortTasksByDueDate() {
-  tasks.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate)); // Sort tasks by due date
-}
-
 function renderTasks() {
+  if (tasks.length > 1) {
+    tasks.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+  }
   tasks.forEach(function (task) {
     renderTask(task);
   });
