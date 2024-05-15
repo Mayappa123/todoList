@@ -102,3 +102,7 @@ ul {
   text-align: center;
 }
 
+.default-message {
+  text-align: center;
+  color: red;
+}

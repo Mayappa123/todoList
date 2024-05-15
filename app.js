@@ -1,7 +1,18 @@
+// app.js
+
 var tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
 document.addEventListener("DOMContentLoaded", function () {
   renderTasks();
   document.getElementById("addTaskBtn").addEventListener("click", addTask);
+
+  if (tasks.length === 0) {
+    var ul = document.getElementById("list-container");
+    var defaultLi = document.createElement("li");
+    defaultLi.textContent = "You don't have any tasks.";
+    defaultLi.classList.add("default-message");
+    ul.appendChild(defaultLi);
+  }
 });
 
 function addTask() {
@@ -20,6 +31,12 @@ function addTask() {
     localStorage.setItem("tasks", JSON.stringify(tasks));
     renderTask(task);
     input.value = "";
+
+    var ul = document.getElementById("list-container");
+    var defaultLi = ul.querySelector(".default-message");
+    if (defaultLi) {
+      ul.removeChild(defaultLi);
+    }
   } else {
     alert("Please enter a task!");
   }
@@ -59,8 +76,19 @@ function renderTask(task) {
     }
     localStorage.setItem("tasks", JSON.stringify(tasks));
     li.classList.toggle("complete");
+
+    if (tasks.length === 0) {
+      var defaultLi = document.createElement("li");
+      defaultLi.textContent = "You don't have any tasks.";
+      defaultLi.classList.add("default-message");
+      ul1.appendChild(defaultLi);
+    }
   });
   ul1.appendChild(li);
+}
+
+function sortTasksByDueDate() {
+  tasks.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate)); // Sort tasks by due date
 }
 
 function renderTasks() {
